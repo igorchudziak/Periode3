@@ -2,7 +2,7 @@
     // functie: formulier en database insert fiets
     // auteur: Vul hier je naam in
 
-    echo "<h1>Insert Fiets</h1>";
+    echo "<h1>Insert Brouwer</h1>";
 
     require_once('functions.php');
 	 
@@ -11,9 +11,9 @@
 
         // test of insert gelukt is
         if(insertRecord($_POST) == true){
-            echo "<script>alert('Fiets is toegevoegd')</script>";
+            echo "<script>alert('Brouwer is toegevoegd')</script>";
         } else {
-            echo '<script>alert("Fiets is NIET toegevoegd")</script>';
+            echo '<script>alert("Brouwer is NIET toegevoegd")</script>';
         }
     }
 ?>
@@ -21,14 +21,11 @@
     <body>
         <form method="post">
 
-        <label for="merk">Merk:</label>
-        <input type="text" id="merk" name="merk" required><br>
+        <label for="naam">Naam:</label>
+        <input type="text" id="naam" name="naam" required><br>
 
-        <label for="type">Type:</label>
-        <input type="text" id="type" name="type" required><br>
-
-        <label for="prijs">Prijs:</label>
-        <input type="number" id="prijs" name="prijs" required><br>
+        <label for="land">Land:</label>
+        <input type="text" id="land" name="land" required><br>
 
         <input type="submit" name="btn_ins" value="Insert">
         </form>

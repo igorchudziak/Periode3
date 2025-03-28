@@ -1,17 +1,17 @@
 <?php
-// auteur: Vul hier je naam in
-// functie: verwijder een bier op basis van de id
+// auteur: Igor Chudziak
+// functie: verwijder een brouwer op basis van de brouwcode
 include 'functions.php';
 
-// Haal bier uit de database
-if(isset($_GET['id'])){
+// Haal brouwer uit de database
+if(isset($_GET['brouwcode'])){
 
     // test of insert gelukt is
-    if(deleteRecord($_GET['id']) == true){
-        echo '<script>alert("Fietscode: ' . $_GET['id'] . ' is verwijderd")</script>';
+    if(deleteRecord($_GET['brouwcode']) == true){
+        echo '<script>alert("Brouwcode: ' . $_GET['brouwcode'] . ' is verwijderd")</script>';
         echo "<script> location.replace('index.php'); </script>";
     } else {
-        echo '<script>alert("Fiets is NIET verwijderd")</script>';
+        echo '<script>alert("Brouwer is NIET verwijderd")</script>';
     }
 }
 ?>
